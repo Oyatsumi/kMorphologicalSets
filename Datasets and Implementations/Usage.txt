@@ -1,0 +1,24 @@
+kMS-CPU.exe -numberOfTimesToDilate -K -thresholdForNoiseRemoval -pathToTheImage
+
+-numberOfTimesToDilate: number of times to dilate the image prior to the clusterization, it may help the algorithm to find better clusters or to converge faster.
+-K: the desired amount of clusters (the final result can be <= k).
+-thresholdForNoiseRemoval: a minimum quantity of pixels that a set must have, otherwise it is erased from the image
+-pathToTheImage: the path where the image is located
+
+
+For instance:
+
+kMS-CPU.exe 1 450 200 "./Chameleon/t7.10k.dat.png"
+kMS-GPU.exe 1 450 200 "./Chameleon/t7.10k.dat.png"
+
+In case of Java, then:
+
+java -jar -server -Xmx4g -Xms4g kMS-parallel.jar -numberOfThreads -numberOfTimesToDilate -K -thresholdForNoiseRemoval -pathToTheImage
+for the parallel version
+
+and
+
+java -jar -server -Xmx4g -Xms4g kMS-sequential.jar -numberOfThreads -numberOfTimesToDilate -K -thresholdForNoiseRemoval -pathToTheImage
+for the sequential one.
+
+Attention! The structuring element should be changed within the source code for better performance!
