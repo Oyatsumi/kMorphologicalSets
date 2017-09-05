@@ -4,7 +4,7 @@ k-Morphological Sets (k-MS) algorithm for clustering based on k-Means and Morpho
 
 For the datasets and binaries (windows x64) please go to the "Datasets and binaries" folder.
 
-For the source code please refer to the "source" folder.
+For the source code please open to the "source" folder.
 
 
 Please refer to the following paper for more information:
